@@ -9,9 +9,9 @@ Vue.config.productionTip = false
 import '../../config/element-ui/element-variables.scss'
 import '../../asset/reset.scss'
 
-import { 
-    Button, 
-    Select 
+import {
+    Button,
+    Select
 } from 'element-ui';
 
 Vue.use(Button)
@@ -23,4 +23,4 @@ new Vue({
   components: { App },
   router,
   template: '<App/>'
-})
+});

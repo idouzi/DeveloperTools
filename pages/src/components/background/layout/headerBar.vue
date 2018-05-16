@@ -1,22 +1,27 @@
 <template>
     <div class="backgound-header">
         <ul class="header-list">
-            <li class="header-list-item">
-
+            <li
+                class="header-list-item"
+                v-for="(item, index) in headerList"
+                :key="index">
+                {{item.name}}
             </li>
         </ul>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'headerBar',
-    headerList: [
-        {
-            name: ''
+    import config from '../../../config/header'
+
+    export default {
+        name: 'headerBar',
+        data() {
+            return {
+                headerList: config.list
+            }
         }
-    ]
-}
+    }
 </script>
 
 <style lang="scss" scoped>

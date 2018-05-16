@@ -5,7 +5,9 @@
         </div>
         <div class="home-list">
             <ul>
-                <li class="home-list-item" v-for="(item, index) in homeList" :key="index">
+                <li class="home-list-item"
+                    v-for="(item, index) in homeList"
+                    :key="index" @click="jump(item.url)">
                     <icon :name="item.icon" class="home-list-icon"></icon>
                     {{item.name}}
                 </li>
@@ -18,39 +20,45 @@
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            homeList: [
-                {
-                    name: 'json字符串格式化',
-                    icon: 'retweet',
-                    url: '#'
-                }, {
-                    name: '代码压缩',
-                    icon: 'code',
-                    url: '#'
-                }, {
-                    name: '页面取色工具',
-                    icon: 'eye-dropper',
-                    url: '#'
-                }, {
-                    name: '时间戳转换',
-                    icon: 'exchange-alt',
-                    url: '#'
-                }, {
-                    name: '图片Base64',
-                    icon: 'file-image',
-                    url: '#'
-                }
-            ]
+    import config from '../../config/header'
+
+    export default {
+        data() {
+            return {
+                background: "",
+                homeList: config.list
+            }
+        },
+
+        created() {
+            console.log(config);
+
+            let _this = this;
+
+            // 判断chrome是否存在，区分开发与正式跳转链接
+            _this.background = chrome.extension ? chrome.extension.getURL('background.html') :
+                               "http://localhost:8080/background.html";
+        },
+
+        mounted() {
+
+        },
+
+        methods: {
+            /**
+             * 跳转到背景页
+             * @param ｛String｝ url 需要跳转的链接
+             */
+            jump(url) {
+                window.open(`${this.background}?name=${url}`);
+            }
         }
+
     }
-}
 </script>
 
 <style lang="scss" scoped>
-    $color-blue: #409EFF;  
+    $color-blue: #409EFF;
 
     .home {
         width: 200px;

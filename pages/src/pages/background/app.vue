@@ -9,22 +9,41 @@
 </template>
 
 <script>
-import HeaderBar from '../../components/background/layout/headerBar'
+    import HeaderBar from '../../components/background/layout/headerBar'
+    import utils from '../../utils';
 
-export default {
-    data() {
-        return {
-           
+    export default {
+        name: 'background',
+        data() {
+            return {
+
+            }
+        },
+        created() {
+            let _this = this;
+
+            _this.jumpRouter();
+        },
+        components: {
+            HeaderBar
+        },
+        methods: {
+            // 根据url中的name值，跳转路由
+            jumpRouter() {
+                let name = utils.getQueryValue('name');
+
+                if(name) {
+                    this.$router.push({
+                        path: `/${name}`
+                    })
+                }
+            }
         }
-    },
-    components: {
-        HeaderBar
     }
-}
 </script>
 
 <style lang="scss" scoped>
-    $color-blue: #409EFF;  
+    $color-blue: #409EFF;
 
     .section {
         .content {

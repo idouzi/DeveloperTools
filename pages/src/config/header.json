@@ -2,25 +2,24 @@
     "list": [
         {
             "name": "json字符串格式化",
-            "value": "",
             "icon": "retweet",
-            "url": "#"
+            "url": "json"
         }, {
             "name": "代码压缩",
             "icon": "code",
-            "url": "#"
+            "url": "code"
         }, {
             "name": "页面取色工具",
             "icon": "eye-dropper",
-            "url": "#"
+            "url": "colorPicker"
         }, {
             "name": "时间戳转换",
             "icon": "exchange-alt",
-            "url": "#"
+            "url": "timeStamp"
         }, {
             "name": "图片Base64",
             "icon": "file-image",
-            "url": "#"
+            "url": "baseImage"
         }
     ]
 }
