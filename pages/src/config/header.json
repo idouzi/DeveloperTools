@@ -3,23 +3,28 @@
         {
             "name": "json字符串格式化",
             "icon": "retweet",
-            "url": "json"
+            "url": "json",
+            "isShowHeader": true
         }, {
             "name": "代码压缩",
             "icon": "code",
-            "url": "code"
+            "url": "codeParam",
+            "isShowHeader": true
         }, {
             "name": "页面取色工具",
             "icon": "eye-dropper",
-            "url": "colorPicker"
+            "url": "colorPicker",
+            "isShowHeader": false
         }, {
             "name": "时间戳转换",
             "icon": "exchange-alt",
-            "url": "timeStamp"
+            "url": "timeStamp",
+            "isShowHeader": true
         }, {
             "name": "图片Base64",
             "icon": "file-image",
-            "url": "baseImage"
+            "url": "baseImage",
+            "isShowHeader": true
         }
     ]
 }

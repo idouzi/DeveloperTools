@@ -46,9 +46,16 @@
     $color-blue: #409EFF;
 
     .section {
+        font-size: 14px;
+
         .content {
+            box-sizing: border-box;
             width: 1200px;
-            margin: auto;
+            margin: 60px auto 0;
+            padding: 20px;
+            min-height: 500px;
+            border-radius: 5px;
+            background-color: #ddd;
         }
     }
 </style>

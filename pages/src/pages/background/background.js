@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 import '../../config/element-ui/element-variables.scss'
 import '../../asset/reset.scss'
@@ -14,8 +14,8 @@ import {
     Select
 } from 'element-ui';
 
-Vue.use(Button)
-Vue.use(Select)
+Vue.use(Button);
+Vue.use(Select);
 
 /* eslint-disable no-new */
 new Vue({

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Code from '../../../components/background/code'
+import CodeParam from '../../../components/background/codeParam'
 import ColorPicker from '../../../components/background/colorPicker'
 import Json from '../../../components/background/json'
 import TimeStamp from '../../../components/background/timeStamp'
@@ -15,8 +15,11 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'code',
-            component: Code
+            redirect: 'codeParam'
+        }, {
+            path: '/codeParam',
+            name: 'codeParam',
+            component: CodeParam
         }, {
             path: '/colorPicker',
             name: 'colorPicker',
