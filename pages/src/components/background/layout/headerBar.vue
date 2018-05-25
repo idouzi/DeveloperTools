@@ -1,15 +1,21 @@
 <template>
     <div class="background-header">
-        <ul class="header-list">
-            <li
-                class="header-list-item"
-                v-for="(item, index) in headerList"
-                v-if="item.isShowHeader"
-                :key="index"
-                @click="jump(item.url)">
-                {{item.name}}
-            </li>
-        </ul>
+        <div class="background-header-inner">
+            <div class="logo">
+                <img src="../../../asset/logo.png" alt="logo">
+            </div>
+
+            <ul class="header-list">
+                <li
+                    class="header-list-item"
+                    v-for="(item, index) in headerList"
+                    v-if="item.isShowHeader"
+                    :key="index"
+                    @click="jump(item.url)">
+                    {{item.name}}
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -48,6 +54,14 @@
         width: 100%;
         color: #fff;
         background-color: $color-blue;
+
+        .background-header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1200px;
+            margin: auto;
+        }
 
         .header-list {
             display: flex;
