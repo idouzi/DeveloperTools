@@ -1,16 +1,36 @@
 {
-  "manifest_version": 2,
+    "manifest_version": 2,
 
-  "name": "开发者工具，Developer tools.",
-  "description": "开发过程中高频使用的工具集合，High-frequency tools used in the development process.",
-  "version": "1.0",
+    "name": "开发者工具，Developer tools.",
+    "description": "开发过程中高频使用的工具集合，High-frequency tools used in the development process.",
+    "version": "1.0",
 
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "home.html"
-  },
-  "permissions": [
-    "activeTab",
-    "storage"
-  ]
+    "icons": {
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+    },
+
+    "homepage_url": "https://www.baidu.com",
+
+    "background": {
+        "page": "background.html"
+    },
+    
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'", 
+
+    "browser_action": {
+        "default_icon": "img/icon.png",
+        "default_title": "开发者工具",
+        "default_popup": "home.html"
+    },
+
+    "chrome_url_overrides": {
+		"newtab": "tabs.html"
+	},
+
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
 }
