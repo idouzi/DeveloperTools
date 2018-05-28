@@ -47,6 +47,8 @@
 
     .section {
         font-size: 14px;
+        border-top: 1px solid transparent;
+        background-color: #f7f7f7;
 
         .content {
             box-sizing: border-box;
@@ -55,7 +57,7 @@
             padding: 20px;
             min-height: 500px;
             border-radius: 5px;
-            background-color: #ddd;
+            background-color: #fff;
         }
     }
 </style>
