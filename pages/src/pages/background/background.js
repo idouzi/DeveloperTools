@@ -19,6 +19,8 @@ import {
     Submenu,
     MenuItem,
     MenuItemGroup,
+    Tabs,
+    TabPane,
 } from 'element-ui';
 
 Vue.use(Button);
@@ -29,6 +31,8 @@ Vue.use(Menu);
 Vue.use(Submenu);
 Vue.use(MenuItem);
 Vue.use(MenuItemGroup);
+Vue.use(Tabs);
+Vue.use(TabPane);
 
 Vue.prototype.$message = Message;
 
