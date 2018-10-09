@@ -48,7 +48,6 @@
     .section {
         font-size: 14px;
         border-top: 1px solid transparent;
-        background-color: #f7f7f7;
 
         .content {
             box-sizing: border-box;
